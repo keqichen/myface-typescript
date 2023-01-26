@@ -8,6 +8,7 @@ function randomInteraction(post) {
   const postDate = parse(post.createdAt, "yyyy-MM-dd HH:mm:ss", new Date());
   const interactionDate = addMinutes(postDate, randomInt(0, 1000));
   const interactionType = ["LIKE", "LIKE", "DISLIKE"][randomInt(0, 2)];
+  //why two 'LIKE'?
 
   return {
     interactionType: interactionType,

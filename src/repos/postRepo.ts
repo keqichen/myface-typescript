@@ -26,22 +26,14 @@ export async function getPosts(
 ): Promise<Post[]> {
   return getPostsQuery(filter)
     .orderBy("createdAt", "desc")
+    .limit(pageSize)
+    .offset((page - 1) * pageSize);
 }
 
 export async function countPosts(filter: PostsFilter = {}): Promise<number> {
   const result = await getPostsQuery(filter).count({ count: "*" }).first();
   return result["count"];
 }
-
-// export async function countPosts(
-//   page: number,
-//   pageSize: number,
-//   filter: PostsFilter = {}): Promise<number> {
-//   const result = await getPostsQuery(filter).count({ count: "*" }).first();
-//   return result["count"];
-// }
-
-
 
 export async function getPost(postId: number): Promise<Post> {
   const posts = await database<Post>("posts").select("*").where("id", postId);
@@ -77,3 +69,4 @@ export async function createPost(newPost: CreatePostRequest): Promise<void> {
     "*"
   );
 }
+

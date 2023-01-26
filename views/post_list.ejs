@@ -7,12 +7,24 @@
 <ol>
     <% postList.results.forEach(function(post) {%>
         <li>
-            //can we add the image directly instead of the url?
-            <%= post.id %> - <%= post.message %> - <%= post.imageUrl %> - <%= format(post.createdAt, "yyyy-MM-dd HH:mm:ss") %>
+      
+            <%= post.id %> - <%= post.message %> - <img alt = "This is a lovely image" src= <%= post.imageUrl %>/> - <%= format(post.createdAt, "yyyy-MM-dd HH:mm:ss") %>
+            <form method="post" action="/posts/<%= post.id %>/like/"> 
+                <button>Like</button>
+            </form>
+    
+            <form method="post" action="/posts/<%= post.id %>/dislike/">
+                <button>Dislike</button>
+            </form>
         </li>
     <% }); %>
 </ol>
-
+<%if (postList.next) { %>
+    <a href="<%= postList.next %>">Next</a>
+<% } %>
+<%if (postList.previous) { %>
+    <a href="<%= postList.previous %>">Previous</a>
+<% } %>
 </body>
 <%- include('_footer') -%>
 </html>

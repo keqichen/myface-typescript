@@ -3,13 +3,16 @@
 <%- include('_header') -%>
 <body>
 <h1>Posts</h1>
+
 <ol>
     <% postList.results.forEach(function(post) {%>
         <li>
-            <%= post.message %> - <%= format(post.createdAt, "yyyy-MM-dd HH:mm:ss") %>
+            //can we add the image directly instead of the url?
+            <%= post.id %> - <%= post.message %> - <%= post.imageUrl %> - <%= format(post.createdAt, "yyyy-MM-dd HH:mm:ss") %>
         </li>
     <% }); %>
 </ol>
+
 </body>
 <%- include('_footer') -%>
 </html>

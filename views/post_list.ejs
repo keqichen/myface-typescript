@@ -12,11 +12,15 @@
 
             <div class="button">
                 <form method="post" action="/posts/<%= post.id %>/like/"> 
-                    <button id="like-button">Like</button>
+
+                    <!--insert the like icon-->
+                    <button id="like-button"><i class="fa-regular fa-thumbs-up"></i></button>
                 </form>
 
                 <form method="post" action="/posts/<%= post.id %>/dislike/">
-                    <button id="dislike-button">Dislike</button>
+                    
+                    <!--insert the dislike icon-->
+                    <button id="dislike-button"><i class="fa-regular fa-thumbs-down"></i></button>
                 </form>
             </div>
         </li>

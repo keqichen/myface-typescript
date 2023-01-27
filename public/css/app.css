@@ -22,10 +22,12 @@
     body ul li div {
         float:left;
         width:94%;
+        /*Still wonder whether there is a neater way to centralise the list element in the mobile view*/
     }
 }
 
 *{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     margin: 0px;
     padding:5px;
     background-color: #252A38;
@@ -48,14 +50,13 @@ ul li{
 }
 
 body ul li div.button {
-    width: 30%;
+    width: 40%;
     display: flex;
 }
 
 #like-button,#dislike-button {
-    background: white;
-    border-radius: 18%;
+    color:white;
+    border-radius: 20px;
     cursor: pointer;
-    border: #252A38;
 }
 

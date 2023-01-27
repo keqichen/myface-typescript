@@ -1,1 +1,61 @@
 /* Add your styles here. */
+@media only screen and (max-width:420px) {
+    /*For mobile*/
+    *{  
+        width:90%;
+        padding:0px;
+    }
+
+    h1{
+        position:relative;
+        text-align: center;
+    }
+
+    body ul{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        
+    }
+
+    body ul li div {
+        float:left;
+        width:94%;
+    }
+}
+
+*{
+    margin: 0px;
+    padding:5px;
+    background-color: #252A38;
+    width: 100%;
+}
+
+h1{
+    text-align: center;
+}
+
+ul {
+    display:grid;
+    grid-template-columns: repeat(3,1fr);
+    
+}
+
+ul li{
+    list-style-type: none;
+    width:100%;
+}
+
+body ul li div.button {
+    width: 30%;
+    display: flex;
+}
+
+#like-button,#dislike-button {
+    background: white;
+    border-radius: 18%;
+    cursor: pointer;
+    border: #252A38;
+}
+

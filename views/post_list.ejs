@@ -4,21 +4,24 @@
 <body>
 <h1>Posts</h1>
 
-<ol>
+<ul>
     <% postList.results.forEach(function(post) {%>
         <li>
-      
-            <%= post.id %> - <%= post.message %> - <img alt = "This is a lovely image" src= <%= post.imageUrl %>/> - <%= format(post.createdAt, "yyyy-MM-dd HH:mm:ss") %>
-            <form method="post" action="/posts/<%= post.id %>/like/"> 
-                <button>Like</button>
-            </form>
-    
-            <form method="post" action="/posts/<%= post.id %>/dislike/">
-                <button>Dislike</button>
-            </form>
+            <div><%= post.id %> - <%= post.message %>-<%= format(post.createdAt, "yyyy-MM-dd HH:mm:ss") %></div>
+            <div class="post-img"><img alt = "This is a lovely image" src= <%= post.imageUrl %>/></div>
+
+            <div class="button">
+                <form method="post" action="/posts/<%= post.id %>/like/"> 
+                    <button id="like-button">Like</button>
+                </form>
+
+                <form method="post" action="/posts/<%= post.id %>/dislike/">
+                    <button id="dislike-button">Dislike</button>
+                </form>
+            </div>
         </li>
     <% }); %>
-</ol>
+</ul>
 <%if (postList.next) { %>
     <a href="<%= postList.next %>">Next</a>
 <% } %>

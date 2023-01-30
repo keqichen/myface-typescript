@@ -6,10 +6,10 @@
 
 <ul>
     <% postList.results.forEach(function(post) {%>
-        <li>
-            <div><%= post.id %> - <%= post.message %>-<%= format(post.createdAt, "yyyy-MM-dd HH:mm:ss") %></div>
-            <div class="post-img"><img alt = "This is a lovely image" src= <%= post.imageUrl %>/></div>
-
+        <li class="post-content">
+            <div class="post-img"><img alt = "This is a lovely image" src= <%= post.imageUrl %> /></div>
+            <div class="post-date"><%= format(post.createdAt, "dd/MM/yyyy") %></div>
+            <div class="post-msg"><%= post.id %> - <%= post.message %></div>
             <div class="button">
                 <form method="post" action="/posts/<%= post.id %>/like/"> 
 

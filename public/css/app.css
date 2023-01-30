@@ -1,4 +1,7 @@
 /* Add your styles here. */
+
+/* Current problem: cannot fix the broken image size */
+
 @media only screen and (max-width:420px) {
     /*For mobile*/
     *{  
@@ -16,12 +19,13 @@
         flex-direction: column;
         justify-content: center;
         align-items: center;
+        gap:30px;
         
     }
 
     body ul li div {
         float:left;
-        width:94%;
+        width:100%;
         /*Still wonder whether there is a neater way to centralise the list element in the mobile view*/
     }
 }
@@ -29,9 +33,10 @@
 *{
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     margin: 0px;
-    padding:5px;
+    padding:0px;
     background-color: #252A38;
     width: 100%;
+    color:white;
 }
 
 h1{
@@ -41,22 +46,76 @@ h1{
 ul {
     display:grid;
     grid-template-columns: repeat(3,1fr);
-    
+    grid-gap:25px;
+    margin: 20px auto;
+    max-width: 90%;
 }
 
 ul li{
     list-style-type: none;
     width:100%;
+    background:#151820;
+    position:relative;
+    max-height: 600px;
+    box-sizing:border-box;
 }
+
+.post-content{
+    background:#151820;
+}
+
+.post-msg{
+    background:transparent;
+    padding-left: 10px;
+}
+
+ .post-img{
+    display: block;
+/*    max-height: 400px;
+box-sizing:border-box;
+*/
+}  
 
 body ul li div.button {
     width: 40%;
     display: flex;
+    gap: 5px;
+    background:#151820;
+    padding:5px;
 }
 
 #like-button,#dislike-button {
     color:white;
     border-radius: 20px;
     cursor: pointer;
+    background:#252A38;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    box-shadow: 0 0 2px black;
+    border: 1px solid gray;
+    /* add a gap between the two buttons */
 }
 
+.post-date {
+    font-size: smaller;
+    background: #151820;
+    font-weight: lighter;
+    color: rgb(201, 199, 199);
+    padding-left: 10px;
+    
+    box-sizing:border-box;
+    /* take a deep look at this property later; */
+}
+
+
+
+form{
+    background:#151820;
+}
+
+ /* we need to centralise the icon within the button; */
+.fa-regular.fa-thumbs-up, .fa-regular.fa-thumbs-down{
+    background:transparent;
+}

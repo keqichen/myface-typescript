@@ -2,9 +2,11 @@
 <%- include('_head') -%>
 <%- include('_header') -%>
 <body>
-<h1>Posts</h1>
 
-<ul>
+
+<p>User1's Posts</p>
+
+<ul class="post-list">
     <% postList.results.forEach(function(post) {%>
         <li class="post-content">
             <div class="post-img"><img onerror="this.src='https://cdn-multicoat-com.sfo2.digitaloceanspaces.com/wp-content/uploads/2018/08/02232112/placeholder.jpg'" alt = "This is a lovely image" src= <%= post.imageUrl %> /></div>

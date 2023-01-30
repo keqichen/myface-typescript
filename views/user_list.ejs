@@ -4,9 +4,10 @@
 <body>
 <h1>Users</h1>
 <ol>
-    <% results.forEach(function(user) {%>
+    
+    <% results.forEach(function(post) {%>
         <li>
-            <%= user.name %>
+            <a href="/users/<%= post.user.id %>"><%= user.name %></a>
         </li>
     <% }); %>
 </ol>

@@ -1,7 +1,4 @@
 /* Add your styles here. */
-
-/* Current problem: cannot fix the broken image size */
-
 @media only screen and (max-width:420px) {
     /*For mobile*/
     *{  
@@ -26,12 +23,16 @@
     body ul li div {
         float:left;
         width:100%;
-        /*Still wonder whether there is a neater way to centralise the list element in the mobile view*/
+    }
+
+    .post-msg{
+        display:inline-block;
     }
 }
 
 *{
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-family: open 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 400;
     margin: 0px;
     padding:0px;
     background-color: #252A38;
@@ -39,17 +40,58 @@
     color:white;
 }
 
-h1{
+/* Nav bar */
+nav{
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-auto-rows: auto;
+    grid-gap: 1em;
+    align-items: center;
     text-align: center;
+    border-bottom: 4px solid black;
+    background: #151820;
+  }
+
+.nav-bar {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
 }
 
-ul {
+.nav-bar li{
+    padding:10px;
+}
+
+a{
+    text-decoration: none;
+    background:#151820;
+}
+
+#col1{
+    grid-column-start: 1;
+    grid-column-end: 1;
+}
+
+#col2{
+    grid-column-start: 2;
+    grid-column-end: 2;
+}
+
+#col3{
+    grid-column-start: 3;
+    grid-column-end: 3;
+}
+
+/* Posts */
+ul.post-list {
     display:grid;
     grid-template-columns: repeat(3,1fr);
     grid-gap:25px;
     margin: 20px auto;
     max-width: 90%;
 }
+
+
 
 ul li{
     list-style-type: none;
@@ -60,6 +102,8 @@ ul li{
     box-sizing:border-box;
 }
 
+
+
 .post-content{
     background:#151820;
 }
@@ -67,14 +111,15 @@ ul li{
 .post-msg{
     background:transparent;
     padding-left: 10px;
+    
 }
 
  .post-img{
     display: block;
-/*    max-height: 400px;
-box-sizing:border-box;
-*/
 }  
+
+
+/* buttons */
 
 body ul li div.button {
     width: 40%;

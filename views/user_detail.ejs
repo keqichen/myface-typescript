@@ -3,6 +3,31 @@
 <%- include('_header') -%>
 <body>
 <h1><%= name %></h1>
+
+    <section id="user-post">
+        <h3><%= name %>'s posts</h3>
+
+
+        <% likes.forEach(function(post) {%>
+            <li>
+                <!-- display the post that the user liked -->
+                <!-- cannot link to the post yet -->
+                <img src ="<%= post.imageUrl %>">Post1</img>
+            </li>
+        <% }); %>
+
+    </section>
+    
+
+    <section id="user-like">
+        <h3><%= name %> liked</h3>
+
+    </section>
+
+    <section id="user-dislike">
+        <h3><%= name %> disliked</h3>
+
+    </section>
 </body>
 <%- include('_footer') -%>
 </html>

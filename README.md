@@ -1,5 +1,7 @@
 # MyFace
 
+This is a responsive social network app.
+
 ## Getting started.
 
 To get setup, download this code, and then run the following commands in the root directory of the app.
@@ -32,3 +34,4 @@ If you ever need to reset the database, then:
 - stop the app
 - delete the `dev.sqlite3` file.
 - run `npm run migrate` and `npm run seed` again to re-make and re-populate the database.
+

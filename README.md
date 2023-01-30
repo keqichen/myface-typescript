@@ -1,5 +1,7 @@
 # MyFace
 
+This is a responsive social network app.
+
 ## Getting started.
 
 To get setup, download this code, and then run the following commands in the root directory of the app.

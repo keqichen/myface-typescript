@@ -7,7 +7,7 @@
 <ul>
     <% postList.results.forEach(function(post) {%>
         <li class="post-content">
-            <div class="post-img"><img onerror="this.src='https://th.bing.com/th/id/R.a6aa1a11d6d65793ba24b3f8e948a0a4?rik=ZFMXnSLhT%2bUezg&pid=ImgRaw&r=0'" alt = "This is a lovely image" src= <%= post.imageUrl %> /></div>
+            <div class="post-img"><img onerror="this.src='https://cdn-multicoat-com.sfo2.digitaloceanspaces.com/wp-content/uploads/2018/08/02232112/placeholder.jpg'" alt = "This is a lovely image" src= <%= post.imageUrl %> /></div>
             <div class="post-date"><%= format(post.createdAt, "dd/MM/yyyy") %></div>
             <div class="post-msg"><%= post.id %> - <%= post.message %></div>
             <div class="button">

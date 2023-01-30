@@ -32,3 +32,4 @@ If you ever need to reset the database, then:
 - stop the app
 - delete the `dev.sqlite3` file.
 - run `npm run migrate` and `npm run seed` again to re-make and re-populate the database.
+

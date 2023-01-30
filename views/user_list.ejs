@@ -5,9 +5,9 @@
 <h1>Users</h1>
 <ol>
     
-    <% results.forEach(function(post) {%>
+    <% results.forEach(function(user) {%>
         <li>
-            <a href="/users/<%= post.user.id %>"><%= user.name %></a>
+            <a href="/users/<%= user.id %>"><%= user.name %></a>
         </li>
     <% }); %>
 </ol>

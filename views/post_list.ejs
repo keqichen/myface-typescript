@@ -3,7 +3,7 @@
 <%- include('_header') -%>
 <body>
 
-
+<main>
 <p id="unique">User1's Posts</p>
 
 <!-- for test1 -->
@@ -37,6 +37,8 @@
 <%if (postList.previous) { %>
     <button class="btn previous"><a href="<%= postList.previous %>">Previous</a></button>
 <% } %>
+
+</main>
 </body>
 <%- include('_footer') -%>
 </html>

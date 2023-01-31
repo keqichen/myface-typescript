@@ -21,9 +21,9 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
   const menuButton = document.getElementById("menu");
+  //class always return an array, so needs to specifiy the index, or use forEach.
   const menuAppear = document.getElementsByClassName("mobile-nav")[0]
 
-  //class always return an array, so needs to specifiy the index, or use forEach.
 
   menuButton.addEventListener("click",function(){
 
@@ -38,30 +38,16 @@ document.addEventListener("DOMContentLoaded", function () {
 
     });
 
-    // const body = document.getElementsByTagName("body");
-    // body.addEventListener("click", function(){
-    //     if(menuAppear.classList.contains("appear")){
-    //       menuAppear.classList.remove("appear");
-    //       menuAppear.classList.add("mobile-nav");
-    //     }
-    //   });
-
-  
-    // can't work properly
-    window.addEventListener("click", function(){
-    
-      console.log("window test")
-    //   if(menuAppear.classList.contains("appear")){
-    //     menuAppear.classList.remove("appear");
-    //     menuAppear.classList.add("mobile-nav");
-    //   }
-  });
-
+    // create a main tag that wraps everything except the nav bar
+    const main = document.getElementsByTagName("main")[0];
+    console.log(main);
+    main.addEventListener("click", function(){
+        if(menuAppear.classList.contains("appear")){
+          menuAppear.classList.remove("appear");
+          menuAppear.classList.add("mobile-nav");
+        }
+      });
 });
-
-
-
-
 
 
   //for some reasons, display does not work

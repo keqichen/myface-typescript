@@ -13,13 +13,13 @@
             <div class="post-date"><%= format(post.createdAt, "dd/MM/yyyy") %></div>
             <div class="post-msg"><%= post.id %> - <%= post.message %></div>
             <div class="button">
-                <form method="post" action="/posts/<%= post.id %>/like/"> 
+                <form class="like" method="post" action="/posts/<%= post.id %>/like/"> 
 
                     <!--insert the like icon-->
                     <button id="like-button"><i class="fa-regular fa-thumbs-up"></i></button>
                 </form>
 
-                <form method="post" action="/posts/<%= post.id %>/dislike/">
+                <form class="dislike" method="post" action="/posts/<%= post.id %>/dislike/">
                     
                     <!--insert the dislike icon-->
                     <button id="dislike-button"><i class="fa-regular fa-thumbs-down"></i></button>
@@ -29,10 +29,10 @@
     <% }); %>
 </ul>
 <%if (postList.next) { %>
-    <a href="<%= postList.next %>">Next</a>
+    <button class="btn next"><a href="<%= postList.next %>">Next</a></button>
 <% } %>
 <%if (postList.previous) { %>
-    <a href="<%= postList.previous %>">Previous</a>
+    <button class="btn previous"><a href="<%= postList.previous %>">Previous</a></button>
 <% } %>
 </body>
 <%- include('_footer') -%>

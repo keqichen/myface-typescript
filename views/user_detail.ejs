@@ -13,23 +13,23 @@
                 </h3>
 
                 <ul class="user-post-list">
-                    <% posts.forEach(function(post) {%>
-
+                    <% for(let i=0; i<6; i++){%>
                         <li id="user-post-item">
-                            <!-- display the post that the user liked -->
                             <div class="post-img">
                                 <img onerror="this.src='https://cdn-multicoat-com.sfo2.digitaloceanspaces.com/wp-content/uploads/2018/08/02232112/placeholder.jpg'"
-                                    alt="This is a lovely image" src=<%=post.imageUrl %> />
+                                    alt="This is a lovely image" 
+                                    src=<%=posts[i].imageUrl %> />
                             </div>
 
                             <div class="post-date">
-                                <%= post.createdAt, "yyyy-MM-dd HH:mm:ss" %>
+                                <%= posts[i].createdAt, "yyyy-MM-dd HH:mm:ss" %>
                             </div>
                             <div class="post-msg">
-                                <%= post.id %> - <%= post.message %>
+                                <%= posts[i].id %> - <%= posts[i].message %>
                             </div>
                         </li>
-                        <% }); %>
+                    <% };%>
+
                 </ul>
 
 

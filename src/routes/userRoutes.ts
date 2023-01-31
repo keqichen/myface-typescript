@@ -2,12 +2,6 @@ import express from "express";
 import { createUser, getPageOfUsers, getUser } from "../services/userService";
 import { CreateUserRequest } from "../models/api/createUserRequest";
 import { body, validationResult } from "express-validator";
-// import {
-//   createPost,
-//   dislikePost,
-//   getPageOfPosts,
-//   likePost,
-// } from "../services/postService";
 
 // import the format
 // import { format } from "date-fns";

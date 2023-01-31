@@ -8,14 +8,14 @@
             </h1>
 
             <section id="user-post">
-                <h3>
+                <h3 id="user-post-title">
                     <%= name %>'s posts
                 </h3>
 
                 <ul id="user-post-list">
                     <% posts.forEach(function(post) {%>
 
-                        <li>
+                        <li id="user-post-item">
                             <!-- display the post that the user liked -->
                             <div class="post-img">
                                 <img onerror="this.src='https://cdn-multicoat-com.sfo2.digitaloceanspaces.com/wp-content/uploads/2018/08/02232112/placeholder.jpg'"
@@ -37,12 +37,12 @@
 
 
             <section id="user-like">
-                <h3>
+                <h3 id="user-likes-title">
                     <%= name %> liked
                 </h3>
                 <ul id="user-likes-list">
                     <% likes.forEach(function(post) {%>
-                        <li>
+                        <li id="user-likes-item">
                             <!-- display the post that the user liked -->
                             <div class="post-img">
                                 <img onerror="this.src='https://cdn-multicoat-com.sfo2.digitaloceanspaces.com/wp-content/uploads/2018/08/02232112/placeholder.jpg'"
@@ -62,13 +62,13 @@
             </section>
 
             <section id="user-dislike">
-                <h3>
+                <h3 id="user-dislikes-title">
                     <%= name %> disliked
                 </h3>
                 <ul id="user-dislikes-list">
 
                     <% dislikes.forEach(function(post) {%>
-                        <li>
+                        <li id="user-dislikes-item">
                             <!-- display the post that the user liked -->
                             <div class="post-img">
                                 <img onerror="this.src='https://cdn-multicoat-com.sfo2.digitaloceanspaces.com/wp-content/uploads/2018/08/02232112/placeholder.jpg'"

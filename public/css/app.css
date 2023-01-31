@@ -11,7 +11,7 @@
         text-align: center;
     }
 
-    body ul{
+    body ul.post-list{
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -20,7 +20,7 @@
         
     }
 
-    body ul li div {
+    body ul.post-list li div {
         float:left;
         width:100%;
     }
@@ -28,6 +28,30 @@
     .post-msg{
         display:inline-block;
     }
+
+
+    /* user-profile */
+    ul#user-post-list,ul#user-likes-list,ul#user-dislikes-list {
+        display:flex;
+        flex-wrap: scroll;
+        gap: 25px;
+        margin: 20px auto;
+        max-width: 90%;
+    }
+
+    section#user-post,section#user-like, section#user-dislike{
+        /* The box's height does not work neatly */
+        max-height:300px;
+        overflow:hidden;
+        margin: 140px 0px;
+    }
+
+    li#user-post-item,li#user-likes-item,li#user-dislikes-item {
+        height: 50%;
+        width: 5%;
+        background: #151820;
+    }
+    
 }
 
 *{
@@ -117,7 +141,6 @@ ul.post-list li{
 
 
 /* buttons */
-
 body ul li div.button {
     width: 40%;
     display: flex;
@@ -137,7 +160,6 @@ body ul li div.button {
     padding: 10px;
     box-shadow: 0 0 2px black;
     border: 1px solid gray;
-    /* add a gap between the
 }
 
 .post-date {
@@ -151,7 +173,6 @@ body ul li div.button {
     /* take a deep look at this property later; */
 }
 
-
 form{
     background:#151820;
 }
@@ -164,9 +185,30 @@ form{
 
 /* user-profile */
 #user-post-list,#user-likes-list,#user-dislikes-list {
-    display:grid;
-    grid-template-columns: repeat(3,1fr);
-    grid-gap:25px;
+    display:flex;
+    flex-wrap: wrap;
+    gap: 25px;
     margin: 20px auto;
     max-width: 90%;
+}
+
+#user-post-list li,#user-likes-list li,#user-dislikes-list li{
+    list-style: none;
+    width: 400px;
+    flex:30%;
+}
+
+/* Restrict the height of the whole section to 1000px and hide the overflowing items */
+#user-post,#user-like, #user-dislike{
+
+    /* The box's height does not work neatly */
+    max-height:100%;
+    overflow:hidden;
+    margin: 140px 0px;
+}
+
+#user-post-item,#user-likes-item,#user-dislikes-item {
+    height: 25%;
+    width: 10%;
+    background: #151820;
 }

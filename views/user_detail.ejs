@@ -7,12 +7,12 @@
                 <%= name %>
             </h1>
 
-            <section id="user-post">
+            <section class="user-post">
                 <h3 id="user-post-title">
                     <%= name %>'s posts
                 </h3>
 
-                <ul id="user-post-list">
+                <ul class="user-post-list">
                     <% posts.forEach(function(post) {%>
 
                         <li id="user-post-item">
@@ -36,11 +36,11 @@
             </section>
 
 
-            <section id="user-like">
+            <section class="user-like">
                 <h3 id="user-likes-title">
                     <%= name %> liked
                 </h3>
-                <ul id="user-likes-list">
+                <ul class="user-likes-list">
                     <% likes.forEach(function(post) {%>
                         <li id="user-likes-item">
                             <!-- display the post that the user liked -->
@@ -61,11 +61,11 @@
 
             </section>
 
-            <section id="user-dislike">
+            <section class="user-dislike">
                 <h3 id="user-dislikes-title">
                     <%= name %> disliked
                 </h3>
-                <ul id="user-dislikes-list">
+                <ul class="user-dislikes-list">
 
                     <% dislikes.forEach(function(post) {%>
                         <li id="user-dislikes-item">

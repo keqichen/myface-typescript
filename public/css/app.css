@@ -4,6 +4,7 @@
     *{  
         width:90%;
         padding:0px;
+    
     }
 
     h1{
@@ -31,28 +32,34 @@
 
 
     /* user-profile */
-    ul#user-post-list,ul#user-likes-list,ul#user-dislikes-list {
-        display:flex;
-        flex-wrap: scroll;
-        gap: 25px;
-        margin: 20px auto;
-        max-width: 90%;
-    }
+    
 
-    section#user-post,section#user-like, section#user-dislike{
+    section.user-post,section.user-like, section.user-dislike{
         /* The box's height does not work neatly */
+        display:flex;
+        flex-wrap: wrap;
         max-height:300px;
         overflow:hidden;
+        max-width: 90%;
         margin: 140px 0px;
+    }
+
+    ul.user-post-list,ul.user-likes-list,ul.user-dislikes-list {
+        gap: 25px;
+        margin: 20px auto;
+        
+        flex:10%;
     }
 
     li#user-post-item,li#user-likes-item,li#user-dislikes-item {
         height: 50%;
-        width: 5%;
+        width: 30%;
         background: #151820;
     }
     
 }
+
+
 
 *{
     font-family: open 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -73,7 +80,6 @@ nav{
     position:fixed;
     top:0;
     z-index:999;
-    
     width:100%;
     background:#151820;
   }
@@ -84,12 +90,15 @@ nav{
     display: flex;
     justify-content: space-evenly;
     align-items: center;
+    background-color: #151820;
 
 }
 
 .nav-bar li{
     padding:10px;
     list-style-type: none;
+    background-color: #151820;
+    
 }
 
 /* This can fix the nav bar position */
@@ -106,6 +115,7 @@ a{
 /* Posts */
 body{
     padding-top: 50px;
+    height:100%;
 }
 
 ul.post-list {
@@ -170,21 +180,29 @@ body ul li div.button {
     padding-left: 10px;
     
     box-sizing:border-box;
-    /* take a deep look at this property later; */
 }
 
 form{
     background:#151820;
 }
 
- /* we need to centralise the icon within the button; */
 .fa-regular.fa-thumbs-up, .fa-regular.fa-thumbs-down{
     background:transparent;
 }
 
 
 /* user-profile */
-#user-post-list,#user-likes-list,#user-dislikes-list {
+
+/* Restrict the height of the whole section to 1000px and hide the overflowing items */
+section.user-post, section.user-like, section.user-dislike{
+
+    /* The box's height does not work neatly */
+    height:100%;
+    overflow:hidden;
+    margin: 140px 0px;
+}
+
+ul.user-post-list, ul.user-likes-list,ul.user-dislikes-list {
     display:flex;
     flex-wrap: wrap;
     gap: 25px;
@@ -192,19 +210,10 @@ form{
     max-width: 90%;
 }
 
-#user-post-list li,#user-likes-list li,#user-dislikes-list li{
+ul.user-post-list li, ul.user-likes-list li, ul.user-dislikes-list li{
     list-style: none;
     width: 400px;
     flex:30%;
-}
-
-/* Restrict the height of the whole section to 1000px and hide the overflowing items */
-#user-post,#user-like, #user-dislike{
-
-    /* The box's height does not work neatly */
-    max-height:100%;
-    overflow:hidden;
-    margin: 140px 0px;
 }
 
 #user-post-item,#user-likes-item,#user-dislikes-item {

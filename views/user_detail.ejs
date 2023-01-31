@@ -1,33 +1,92 @@
 <html lang="en-gb">
 <%- include('_head') -%>
-<%- include('_header') -%>
-<body>
-<h1><%= name %></h1>
+    <%- include('_header') -%>
 
-    <section id="user-post">
-        <h3><%= name %>'s posts</h3>
+        <body>
+            <h1>
+                <%= name %>
+            </h1>
+
+            <section id="user-post">
+                <h3>
+                    <%= name %>'s posts
+                </h3>
+
+                <ul id="user-post-list">
+                    <% posts.forEach(function(post) {%>
+
+                        <li>
+                            <!-- display the post that the user liked -->
+                            <div class="post-img">
+                                <img onerror="this.src='https://cdn-multicoat-com.sfo2.digitaloceanspaces.com/wp-content/uploads/2018/08/02232112/placeholder.jpg'"
+                                    alt="This is a lovely image" src=<%=post.imageUrl %> />
+                            </div>
+
+                            <div class="post-date">
+                                <%= post.createdAt, "yyyy-MM-dd HH:mm:ss" %>
+                            </div>
+                            <div class="post-msg">
+                                <%= post.id %> - <%= post.message %>
+                            </div>
+                        </li>
+                        <% }); %>
+                </ul>
 
 
-        <% likes.forEach(function(post) {%>
-            <li>
-                <!-- display the post that the user liked -->
-                <!-- cannot link to the post yet -->
-                <img src ="<%= post.imageUrl %>">Post1</img>
-            </li>
-        <% }); %>
+            </section>
 
-    </section>
-    
 
-    <section id="user-like">
-        <h3><%= name %> liked</h3>
+            <section id="user-like">
+                <h3>
+                    <%= name %> liked
+                </h3>
+                <ul id="user-likes-list">
+                    <% likes.forEach(function(post) {%>
+                        <li>
+                            <!-- display the post that the user liked -->
+                            <div class="post-img">
+                                <img onerror="this.src='https://cdn-multicoat-com.sfo2.digitaloceanspaces.com/wp-content/uploads/2018/08/02232112/placeholder.jpg'"
+                                    alt="This is a lovely image" src=<%=post.imageUrl %> />
+                            </div>
+                            <div class="post-date">
+                                <%= post.createdAt, "yyyy-MM-dd HH:mm:ss" %>
+                            </div>
+                            <div class="post-msg">
+                                <%= post.id %> - <%= post.message %>
+                            </div>
+                        </li>
 
-    </section>
+                        <% }); %>
+                </ul>
 
-    <section id="user-dislike">
-        <h3><%= name %> disliked</h3>
+            </section>
 
-    </section>
-</body>
-<%- include('_footer') -%>
+            <section id="user-dislike">
+                <h3>
+                    <%= name %> disliked
+                </h3>
+                <ul id="user-dislikes-list">
+
+                    <% dislikes.forEach(function(post) {%>
+                        <li>
+                            <!-- display the post that the user liked -->
+                            <div class="post-img">
+                                <img onerror="this.src='https://cdn-multicoat-com.sfo2.digitaloceanspaces.com/wp-content/uploads/2018/08/02232112/placeholder.jpg'"
+                                    alt="This is a lovely image" src=<%=post.imageUrl %> />
+                            </div>
+                            <div class="post-date">
+                                <%= post.createdAt, "yyyy-MM-dd HH:mm:ss" %>
+                            </div>
+                            <div class="post-msg">
+                                <%= post.id %> - <%= post.message %>
+                            </div>
+                        </li>
+
+                        <% }); %>
+                </ul>
+
+            </section>
+        </body>
+        <%- include('_footer') -%>
+
 </html>

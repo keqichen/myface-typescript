@@ -2,6 +2,15 @@ import express from "express";
 import { createUser, getPageOfUsers, getUser } from "../services/userService";
 import { CreateUserRequest } from "../models/api/createUserRequest";
 import { body, validationResult } from "express-validator";
+// import {
+//   createPost,
+//   dislikePost,
+//   getPageOfPosts,
+//   likePost,
+// } from "../services/postService";
+
+// import the format
+// import { format } from "date-fns";
 
 const router = express.Router();
 
@@ -12,6 +21,7 @@ router.get("/", async (request, response) => {
     : 10;
 
   const userList = await getPageOfUsers(page, pageSize);
+
   return response.render("user_list", userList);
 });
 

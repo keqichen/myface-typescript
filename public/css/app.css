@@ -10,6 +10,23 @@
     
     }
 
+    section.user-profile{
+        display:flex;
+        gap:20px;
+    }
+
+    section.user-profile img.profile-image{
+        width:120px;
+        height:120px;
+        border-radius: 120px;
+    }
+
+    section.user-profile .user-info{
+        margin-top:80px;
+    }
+    
+
+
     h1{
         position:relative;
         text-align: center;
@@ -38,39 +55,107 @@
     }
 
     nav.appear{
-        display:block;
+        background-color: #151820;
+        position:fixed;
+        right:0px;
+        top: 0px;
+        text-align: center;
+        width: 45%;
+        z-index: 999;
+        height:100%;
+        line-height: 40px;
+        display:flex;
+        flex-direction: column;
+        gap: 100px;
+        padding-top: 50px;
+        
+
+    }
+
+    button#menu{
+        width: 10%;
+        position:absolute;
+        right: 10px;
+        top:18px;
+        border:none;
+        font-size: 20px;
     }
     
+    button#escape-button{
+        width: 10%;
+        position:absolute;
+        right: 10px;
+        top:5px;
+        border:none;
+        background-color: #151820;
+    }
+
     /* user-profile */
     
 
     section.user-post,section.user-like, section.user-dislike{
         /* The box's height does not work neatly */
-        max-height:300px;
-        overflow:hidden;
+        /* max-height:300px; */
+        /* overflow:hidden; */
         max-width: 90%;
-        margin: 140px 0px;
+        margin: 140px auto;
     }
 
     ul.user-post-list,ul.user-likes-list,ul.user-dislikes-list {
         gap: 25px;
         margin: 20px auto;
         display:flex;
+        flex-direction: row;
         flex-wrap: nowrap;
+        justify-content: center;
+        
     }
 
     ul li#user-post-item, ul li#user-likes-item,ul li#user-dislikes-item {
-        height: 25%;
-        width: 10%;
+        /* height: 25%;
+        width: 10%; */
         background: #151820;
         list-style: none;
-        width: 400px;
         flex:30%;
 
     }
-    
-}
 
+    button#menu{
+        display: block;
+    }
+
+    nav.normal-nav#normal{
+        display:none
+      }
+
+    .nav-bar{
+        list-style: none;
+    }
+
+
+    section.user-post, section.user-like, section.user-dislike{
+
+        margin: 20px 0px;
+    }
+    
+    ul.user-post-list, ul.user-likes-list,ul.user-dislikes-list {
+        display:flex;
+        flex-wrap: wrap;
+        gap: 25px;
+        margin: 20px auto;
+        max-width: 30%;
+    }
+    
+    
+    li#user-post-item,li#user-likes-item,li#user-dislikes-item {
+        height: 10%;
+        width: 10%;
+        background: #151820;
+        list-style: none;
+        width: 150px;
+        flex:30%;
+    }
+}
 
 
 *{
@@ -110,7 +195,7 @@ nav.normal-nav .nav-bar li{
     padding:10px;
     list-style-type: none;
     background-color: #151820;
-    
+
 }
 
 /* This can fix the nav bar position */
@@ -192,6 +277,15 @@ body ul li div.button {
     border: 1px solid gray;
 }
 
+#like-button:hover{
+    background-color: black;
+}
+
+
+#dislike-button:hover{
+    background-color: black;
+}
+
 .post-date {
     font-size: smaller;
     background: #151820;
@@ -238,4 +332,61 @@ li#user-post-item,li#user-likes-item,li#user-dislikes-item {
     list-style: none;
     width: 400px;
     flex:30%;
+}
+
+nav.mobile-nav{
+    display: none;
+}
+
+#menu{
+    display: none;
+}
+
+h1{
+    text-align: center;
+}
+
+img.profile-image{
+    width:200px;
+    height:200px;
+    border-radius: 100px;
+    margin-left: 20px;
+    margin-top: 20px;
+    border: solid 5px white;
+    position:absolute;
+    top:50%;
+    left:2%;
+}
+
+.user-profile{
+    display:flex;
+    gap:20px;
+    
+}
+
+.user-profile .user-info{
+    margin-top:150px;
+    position:absolute;
+    top:50%;
+    left:18%;
+    width:10%;
+    background-color: transparent;
+    text-align: center;
+}
+
+.cover-image{
+
+    margin-left:0;
+}
+
+.user-info .name{
+    background-color: rgb(21, 24, 32,0.5);
+}
+
+.btn.next, .btn.previous{
+    margin:0 35%;
+    display:inline-block;
+    border: none;
+
+    
 }

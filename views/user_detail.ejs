@@ -3,9 +3,18 @@
     <%- include('_header') -%>
 
         <body>
-            <h1>
-                <%= name %>
-            </h1>
+        <main>
+
+
+            <section class="user-profile">
+                <img class="profile-image" alt="user's profile image" src="<%=profileImageUrl %>">
+                <img class="cover-image" alt="user's cover image" src="<%=coverImageUrl %>">
+                <div class="user-info">
+                    <h2 class="name"><%= name%></h2>
+                    <div class="nick-name"><%= username%></div>
+                    <div class="email"><%= email%></div>
+                </div>
+            </section>
 
             <section class="user-post">
                 <h3 id="user-post-title">
@@ -41,22 +50,22 @@
                     <%= name %> liked
                 </h3>
                 <ul class="user-likes-list">
-                    <% likes.forEach(function(post) {%>
+                    <% for(let i=0; i<6; i++){%>
                         <li id="user-likes-item">
                             <!-- display the post that the user liked -->
                             <div class="post-img">
                                 <img onerror="this.src='https://cdn-multicoat-com.sfo2.digitaloceanspaces.com/wp-content/uploads/2018/08/02232112/placeholder.jpg'"
-                                    alt="This is a lovely image" src=<%=post.imageUrl %> />
+                                    alt="This is a lovely image" src=<%=likes[i].imageUrl %> />
                             </div>
                             <div class="post-date">
-                                <%= post.createdAt, "yyyy-MM-dd HH:mm:ss" %>
+                                <%= likes[i].createdAt, "yyyy-MM-dd HH:mm:ss" %>
                             </div>
                             <div class="post-msg">
-                                <%= post.id %> - <%= post.message %>
+                                <%= likes[i].id %> - <%= likes[i].message %>
                             </div>
                         </li>
 
-                        <% }); %>
+                        <% }; %>
                 </ul>
 
             </section>
@@ -66,26 +75,26 @@
                     <%= name %> disliked
                 </h3>
                 <ul class="user-dislikes-list">
-
-                    <% dislikes.forEach(function(post) {%>
+                    <% for(let i=0; i<6; i++){%>
                         <li id="user-dislikes-item">
                             <!-- display the post that the user liked -->
                             <div class="post-img">
                                 <img onerror="this.src='https://cdn-multicoat-com.sfo2.digitaloceanspaces.com/wp-content/uploads/2018/08/02232112/placeholder.jpg'"
-                                    alt="This is a lovely image" src=<%=post.imageUrl %> />
+                                    alt="This is a lovely image" src=<%=dislikes[i].imageUrl %> />
                             </div>
                             <div class="post-date">
-                                <%= post.createdAt, "yyyy-MM-dd HH:mm:ss" %>
+                                <%= dislikes[i].createdAt, "yyyy-MM-dd HH:mm:ss" %>
                             </div>
                             <div class="post-msg">
-                                <%= post.id %> - <%= post.message %>
+                                <%= dislikes[i].id %> - <%= dislikes[i].message %>
                             </div>
                         </li>
 
-                        <% }); %>
+                        <% }; %>
                 </ul>
 
             </section>
+        </main>
         </body>
         <%- include('_footer') -%>
 

@@ -7,7 +7,7 @@
         <ul class="user-list">
             <% for (let i=0;i<9;i++){%>
                 <li class="user-list-item">
-                    <img src=<%=results[i].profileImageUrl %>>
+                    <a href="/users/<%= results[i].id %>"><img src=<%=results[i].profileImageUrl %>></a>
                     <a class="user-link" href="/users/<%= results[i].id %>"><%= results[i].name %></a>
                 </li>
             <% }; %>

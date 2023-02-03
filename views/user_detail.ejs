@@ -18,7 +18,7 @@
 
             <section class="user-post">
                 <h3 id="user-post-title">
-                    <%= name %>'s posts
+                    <%= name.split(" ")[0] %>'s posts
                 </h3>
 
                 <ul class="user-post-list">
@@ -47,7 +47,7 @@
 
             <section class="user-like">
                 <h3 id="user-likes-title">
-                    <%= name %> liked
+                    <%= name.split(" ")[0] %> liked
                 </h3>
                 <ul class="user-likes-list">
                     <% for(let i=0; i<6; i++){%>
@@ -72,7 +72,7 @@
 
             <section class="user-dislike">
                 <h3 id="user-dislikes-title">
-                    <%= name %> disliked
+                    <%= name.split(" ")[0] %> disliked
                 </h3>
                 <ul class="user-dislikes-list">
                     <% for(let i=0; i<6; i++){%>

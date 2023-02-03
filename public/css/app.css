@@ -168,6 +168,10 @@
     color:white;
 }
 
+a{
+    text-decoration: none;
+    background-color: transparent;
+}
 /* Nav bar */
 header{
     background: #151820;

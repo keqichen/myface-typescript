@@ -5,12 +5,12 @@
     <main>
         <h1>All Users</h1>
         <ul class="user-list">
-            <% results.forEach(function(user) {%>
+            <% for (let i=0;i<9;i++){%>
                 <li class="user-list-item">
-                    <img src=<%=user.profileImageUrl %>>
-                    <a class="user-link" href="/users/<%= user.id %>"><%= user.name %></a>
+                    <img src=<%=results[i].profileImageUrl %>>
+                    <a class="user-link" href="/users/<%= results[i].id %>"><%= results[i].name %></a>
                 </li>
-            <% }); %>
+            <% }; %>
         </ul>
         <%if (next) { %>
             <a href="<%= next %>">Next</a>

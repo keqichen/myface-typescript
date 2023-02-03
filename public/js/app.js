@@ -4,15 +4,6 @@ document.addEventListener("DOMContentLoaded", function () {
   // const button1 = document.getElementById("test");
   
   // // in this way we could apply styles to the same elements with the same class name
-  // var arr = Array.from(document.getElementsByClassName("post-msg"));
-  // const title = document.getElementById("unique");
-
-  // button1.addEventListener("click",function(){
-  //  title.style.fontSize="100px";
-  //  arr.forEach((i)=>{
-  //   i.style.backgroundColor= "rgb(100, 100, 100)";
-  // })
-  // })
 
   const menuButton = document.getElementById("menu");
   //class always return an array, so needs to specifiy the index, or use forEach.

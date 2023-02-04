@@ -2,10 +2,8 @@
 <%- include('_head') -%>
     <%- include('_header') -%>
 
-        <body>
+    <body>
         <main>
-
-
             <section class="user-profile">
                 <img class="profile-image" alt="user's profile image" src="<%=profileImageUrl %>">
                 <img class="cover-image" alt="user's cover image" src="<%=coverImageUrl %>">
@@ -16,14 +14,14 @@
                 </div>
             </section>
 
-            <section class="user-post">
+            <section class="user-post mobile">
                 <h3 id="user-post-title">
                     <%= name.split(" ")[0] %>'s posts
                 </h3>
 
-                <ul class="user-post-list">
+                <ul class="user-post-list mobile">
                     <% for(let i=0; i<6; i++){%>
-                        <li id="user-post-item">
+                        <li class="mobile" id="user-post-item">
                             <div class="post-img">
                                 <img onerror="this.src='https://cdn-multicoat-com.sfo2.digitaloceanspaces.com/wp-content/uploads/2018/08/02232112/placeholder.jpg'"
                                     alt="This is a lovely image" 
@@ -33,6 +31,7 @@
                             <div class="post-date">
                                 <%= posts[i].createdAt, "yyyy-MM-dd HH:mm:ss" %>
                             </div>
+
                             <div class="post-msg">
                                 <%= posts[i].id %> - <%= posts[i].message %>
                             </div>
@@ -40,18 +39,15 @@
                     <% };%>
 
                 </ul>
-
-
             </section>
 
-
-            <section class="user-like">
+            <section class="user-like mobile">
                 <h3 id="user-likes-title">
                     <%= name.split(" ")[0] %> liked
                 </h3>
-                <ul class="user-likes-list">
+                <ul class="user-likes-list mobile">
                     <% for(let i=0; i<6; i++){%>
-                        <li id="user-likes-item">
+                        <li class="mobile" id="user-likes-item">
                             <!-- display the post that the user liked -->
                             <div class="post-img">
                                 <img onerror="this.src='https://cdn-multicoat-com.sfo2.digitaloceanspaces.com/wp-content/uploads/2018/08/02232112/placeholder.jpg'"
@@ -64,19 +60,18 @@
                                 <%= likes[i].id %> - <%= likes[i].message %>
                             </div>
                         </li>
-
                         <% }; %>
                 </ul>
 
             </section>
 
-            <section class="user-dislike">
+            <section class="user-dislike mobile">
                 <h3 id="user-dislikes-title">
                     <%= name.split(" ")[0] %> disliked
                 </h3>
-                <ul class="user-dislikes-list">
+                <ul class="user-dislikes-list mobile">
                     <% for(let i=0; i<6; i++){%>
-                        <li id="user-dislikes-item">
+                        <li class="mobile" id="user-dislikes-item">
                             <!-- display the post that the user liked -->
                             <div class="post-img">
                                 <img onerror="this.src='https://cdn-multicoat-com.sfo2.digitaloceanspaces.com/wp-content/uploads/2018/08/02232112/placeholder.jpg'"
@@ -89,13 +84,10 @@
                                 <%= dislikes[i].id %> - <%= dislikes[i].message %>
                             </div>
                         </li>
-
                         <% }; %>
                 </ul>
-
             </section>
         </main>
-        </body>
-        <%- include('_footer') -%>
-
+    </body>
+    <%- include('_footer') -%>
 </html>

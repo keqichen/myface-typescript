@@ -7,7 +7,6 @@
     *{  
         width:90%;
         padding:0px;
-    
     }
 
     section.user-profile{
@@ -25,8 +24,6 @@
         margin-top:80px;
     }
     
-
-
     h1{
         position:relative;
         text-align: center;
@@ -68,8 +65,6 @@
         flex-direction: column;
         gap: 100px;
         padding-top: 50px;
-        
-
     }
 
     button#menu{
@@ -91,34 +86,40 @@
     }
 
     /* user-profile */
-    
-
-    section.user-post,section.user-like, section.user-dislike{
-        /* The box's height does not work neatly */
-        /* max-height:300px; */
-        /* overflow:hidden; */
-        max-width: 90%;
+    section.user-post.mobile, section.user-like.mobile, section.user-dislike.mobile{
+        /* max-width: 100%;
+        max-height: 40%;
         margin: 140px auto;
-    }
-
-    ul.user-post-list,ul.user-likes-list,ul.user-dislikes-list {
-        gap: 25px;
-        margin: 20px auto;
-        display:flex;
-        flex-direction: row;
-        flex-wrap: nowrap;
-        justify-content: center;
+        white-space: nowrap; */
         
+        display: grid;
+        grid-template-columns: 100%;
+        grid-template-rows: 20px 300px 10px;
+        margin:150px 0 auto auto;
     }
 
-    ul li#user-post-item, ul li#user-likes-item,ul li#user-dislikes-item {
-        /* height: 25%;
-        width: 10%; */
-        background: #151820;
+    ul.user-post-list.mobile,ul.user-likes-list.mobile,ul.user-dislikes-list.mobile {
+        grid-row-start: 2;
+        grid-row-end: 3;
+        grid-column-start: 1;
+        grid-column-end: 2;
+
+        overflow-x: scroll;
+        scroll-snap-type: x proximity;
+        display: inline-flex;
+        flex-wrap: nowrap;
+        /* width:6000px; */
+        height:300px;
+        padding: 20px;
         list-style: none;
-        flex:30%;
-
     }
+
+    ul li.mobile#user-post-item, ul li#user-likes-item.mobile,ul li#user-dislikes-item.mobile {
+        width: auto;
+        height: 300px;
+        border:1px grey solid;
+    }
+
 
     button#menu{
         display: block;
@@ -130,30 +131,6 @@
 
     .nav-bar{
         list-style: none;
-    }
-
-
-    section.user-post, section.user-like, section.user-dislike{
-
-        margin: 20px 0px;
-    }
-    
-    ul.user-post-list, ul.user-likes-list,ul.user-dislikes-list {
-        display:flex;
-        flex-wrap: wrap;
-        gap: 25px;
-        margin: 20px auto;
-        max-width: 30%;
-    }
-    
-    
-    li#user-post-item,li#user-likes-item,li#user-dislikes-item {
-        height: 10%;
-        width: 10%;
-        background: #151820;
-        list-style: none;
-        width: 150px;
-        flex:30%;
     }
 }
 

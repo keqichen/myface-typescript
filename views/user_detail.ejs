@@ -29,7 +29,7 @@
                             </div>
 
                             <div class="post-date">
-                                <%= posts[i].createdAt, "yyyy-MM-dd HH:mm:ss" %>
+                                <%= posts[i].createdAt.toLocaleDateString() %>
                             </div>
 
                             <div class="post-msg">
@@ -54,7 +54,7 @@
                                     alt="This is a lovely image" src=<%=likes[i].imageUrl %> />
                             </div>
                             <div class="post-date">
-                                <%= likes[i].createdAt, "yyyy-MM-dd HH:mm:ss" %>
+                                <%= new Date(likes[i].createdAt).toLocaleDateString() %>
                             </div>
                             <div class="post-msg">
                                 <%= likes[i].id %> - <%= likes[i].message %>
@@ -78,7 +78,7 @@
                                     alt="This is a lovely image" src=<%=dislikes[i].imageUrl %> />
                             </div>
                             <div class="post-date">
-                                <%= dislikes[i].createdAt, "yyyy-MM-dd HH:mm:ss" %>
+                                <%= new Date(dislikes[i].createdAt).toLocaleDateString() %>
                             </div>
                             <div class="post-msg">
                                 <%= dislikes[i].id %> - <%= dislikes[i].message %>

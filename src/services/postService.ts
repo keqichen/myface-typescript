@@ -53,7 +53,7 @@ async function toPostModel(post: Post): Promise<PostModel> {
     id: post.id,
     message: post.message,
     imageUrl: post.imageUrl,
-    createdAt: parse(post.createdAt, "yyyy-MM-dd HH:mm:ss", new Date()),
+    createdAt: parse(post.createdAt, "dd-MM-yyyy HH:mm:ss", new Date()),
     postedBy: await getUser(post.userId),
     likedBy: await getByPostInteraction(post.id, "LIKE", 1, 10),
     dislikedBy: await getByPostInteraction(post.id, "DISLIKE", 1, 10),

@@ -33,12 +33,13 @@
                             </div>
 
                             <div class="post-msg">
-                                <%= posts[i].id %> - <%= posts[i].message %>
+                                <%= posts[i].message %>
                             </div>
                         </li>
                     <% };%>
-
                 </ul>
+
+                <button class="btn load post">Load More</button>
             </section>
 
             <section class="user-like mobile">
@@ -57,11 +58,13 @@
                                 <%= new Date(likes[i].createdAt).toLocaleDateString() %>
                             </div>
                             <div class="post-msg">
-                                <%= likes[i].id %> - <%= likes[i].message %>
+                                <%= likes[i].message %>
                             </div>
                         </li>
                         <% }; %>
                 </ul>
+
+                <button class="btn load likes">Load More</button>
 
             </section>
 
@@ -81,11 +84,13 @@
                                 <%= new Date(dislikes[i].createdAt).toLocaleDateString() %>
                             </div>
                             <div class="post-msg">
-                                <%= dislikes[i].id %> - <%= dislikes[i].message %>
+                                <%= dislikes[i].message %>
                             </div>
                         </li>
                         <% }; %>
                 </ul>
+
+                <button class="btn load dislikes">Load More</button>
             </section>
         </main>
     </body>

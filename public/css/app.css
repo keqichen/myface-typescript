@@ -87,11 +87,6 @@
 
     /* user-profile */
     section.user-post.mobile, section.user-like.mobile, section.user-dislike.mobile{
-        /* max-width: 100%;
-        max-height: 40%;
-        margin: 140px auto;
-        white-space: nowrap; */
-        
         display: grid;
         grid-template-columns: 100%;
         grid-template-rows: 20px 300px 10px;
@@ -293,10 +288,6 @@ form{
 
 /* Restrict the height of the whole section to 1000px and hide the overflowing items */
 section.user-post, section.user-like, section.user-dislike{
-
-    /* The box's height does not work neatly */
-    /* height:860px;
-    overflow:hidden; */
     margin: 140px 0px;
 }
 
@@ -377,6 +368,21 @@ img.profile-image{
 
 section h3{
     margin-left: 15px;
+}
+
+.btn.load{
+    padding: 20px;
+    margin: 40px;
+    border: solid 2px #2985ff;
+    color: #2985ff;
+    font-size: 20px;
+    cursor: pointer;
+    max-width: 150px;
+    border-radius: 10px;
+}
+
+.btn.load:hover{
+    background-color: #151820;
 }
 
 /* user-list page */
